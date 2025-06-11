@@ -1,0 +1,15 @@
+PING yahoo.com (2001:4998:24:120d::1:0) 56 data bytes
+
+--- yahoo.com ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4110ms
+
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=56 time=31.6 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=56 time=30.7 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=56 time=30.5 ms
+64 bytes from 1.1.1.1: icmp_seq=4 ttl=56 time=30.6 ms
+64 bytes from 1.1.1.1: icmp_seq=5 ttl=56 time=30.5 ms
+
+--- 1.1.1.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 30.529/30.817/31.637/0.416 ms

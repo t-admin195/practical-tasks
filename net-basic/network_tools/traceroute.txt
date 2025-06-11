@@ -1,0 +1,29 @@
+traceroute to yahoo.com (74.6.143.26), 30 hops max, 60 byte packets
+
+ 1  [local router] 3.439 ms  3.397 ms  3.379 ms
+ 2  p3e9bf214.dip0.t-ipconnect.de (62.155.242.20)  6.490 ms  6.545 ms  6.864 ms
+ 3  62.153.182.142 (62.153.182.142)  11.322 ms  11.307 ms  11.291 ms
+ 4  80.157.128.31 (80.157.128.31)  15.813 ms  15.795 ms  15.779 ms
+ 5  mcn-b5-link.ip.twelve99.net (62.115.126.184)  12.756 ms  12.738 ms  12.721 ms
+ 6  ffm-bb1-link.ip.twelve99.net (62.115.126.110)  19.057 ms  14.562 ms  14.766 ms
+ 7  prs-bb1-link.ip.twelve99.net (62.115.123.13)  25.252 ms  24.499 ms *
+ 8  ldn-bb1-link.ip.twelve99.net (62.115.135.24)  31.533 ms  31.512 ms  31.889 ms
+ 9  nyk-bb5-link.ip.twelve99.net (62.115.139.244)  108.517 ms  106.410 ms  106.367 ms
+10  buf-b3-link.ip.twelve99.net (62.115.118.123)  146.537 ms  146.521 ms  146.504 ms
+11  yahooholdings-ic-315726.ip.twelve99-cust.net (213.248.82.10)  154.229 ms  154.726 ms  154.685 ms
+12  ae-3.pat2.bfz.yahoo.com (209.191.64.181)  205.690 ms ae-3.pat1.bfz.yahoo.com (209.191.64.183)  160.891 ms ae-3.pat2.bfz.yahoo.com (209.191.64.181)  211.092 ms
+13  ae-31.msr1.bf2.yahoo.com (74.6.227.145)  286.920 ms ae-30.msr2.bf2.yahoo.com (72.30.223.27)  181.366 ms ae-32.msr2.bf1.yahoo.com (74.6.227.141)  205.385 ms
+14  et-0-1-0.clr2-a-gdc.bf2.yahoo.com (74.6.122.57)  149.226 ms et-10-0-0.clr2-a-gdc.bf2.yahoo.com (66.196.117.19)  155.180 ms et-0-1-0.clr1-a-gdc.bf2.yahoo.com (74.6.122.53)  148.711 ms
+15  lo0.fab7-1-gdc.bf2.yahoo.com (74.6.123.238)  183.313 ms lo0.fab3-1-gdc.bf2.yahoo.com (74.6.123.242)  150.234 ms lo0.fab6-1-gdc.bf2.yahoo.com (74.6.123.239)  211.247 ms
+16  usw1-1-lbb.bf2.yahoo.com (74.6.98.138)  265.667 ms  289.090 ms  290.431 ms
+17  media-router-fp74.prod.media.vip.bf1.yahoo.com (74.6.143.26)  257.648 ms  259.159 ms  259.867 ms
+
+traceroute to 1.1.1.1 (1.1.1.1), 30 hops max, 60 byte packets
+ 1  [local router]  2.225 ms  2.162 ms  2.141 ms
+ 2  p3e9bf214.dip0.t-ipconnect.de (62.155.242.20)  5.500 ms  5.483 ms  5.467 ms
+ 3  d-ed5-i.D.DE.NET.DTAG.DE (217.0.199.238)  21.403 ms d-ed5-i.D.DE.NET.DTAG.DE (217.5.102.70)  21.386 ms d-ed5-i.D.DE.NET.DTAG.DE (217.5.119.58)  21.369 ms
+ 4  ae5.edge6.dus1.sp.lumen.tech (4.68.71.113)  21.351 ms  21.334 ms  21.320 ms
+ 5  * * *
+ 6  212.162.9.130 (212.162.9.130)  23.676 ms  18.284 ms 195.122.183.210 (195.122.183.210)  18.234 ms
+ 7  162.158.84.185 (162.158.84.185)  21.272 ms  20.813 ms 162.158.84.55 (162.158.84.55)  19.977 ms
+ 8  one.one.one.one (1.1.1.1)  33.708 ms  31.543 ms  31.475 ms
