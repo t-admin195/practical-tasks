@@ -5,19 +5,20 @@ a simple mini-project to set up a basic home linux server with user management, 
 ## Structure
 
 ```bash
-home-server/
-├── backup/
-│ ├── backup.conf
-│ └── backup.sh
-├── config/
-│ ├── iptables.rules
-│ └── nginx.conf
-├── users/
-│ 
-└── README.md + setup.sh
+home-server
+    ├── backup
+    │   ├── backup.conf
+    │   └── backup.sh
+    ├── config
+    │   ├── iptables.rules
+    │   └── nginx.conf
+    ├── README.md
+    ├── setup.sh
+    └── users
+        └── usermanager.sh
 ```
 
-##Usage
+## Usage
 
 - Create user:
 
@@ -25,7 +26,7 @@ home-server/
 sudo ./users/usermanager.sh
 ```
 
-##Backup:
+## Backup:
 
 - edit backup/backup.conf
 
