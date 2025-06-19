@@ -20,7 +20,7 @@ home-server
 
 ## Usage
 
-- Create user:
+- create user:
 
 ```bash
 sudo ./users/usermanager.sh
