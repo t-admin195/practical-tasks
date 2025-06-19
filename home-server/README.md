@@ -4,6 +4,7 @@ a simple mini-project to set up a basic home linux server with user management, 
 
 ## Structure
 
+```bash
 home-server/
 ├── backup/
 │ ├── backup.conf
@@ -14,16 +15,17 @@ home-server/
 ├── users/
 │ 
 └── README.md + setup.sh
+```
 
 ##Usage
 
-###Create user:
+- Create user:
 
 ```bash
 sudo ./users/usermanager.sh
 ```
 
-###Backup:
+##Backup:
 
 - edit backup/backup.conf
 
@@ -32,7 +34,7 @@ then run:
 ```bash
 ./backup/backup.sh
 ```
-### Apply configs:
+## Apply configs:
 
 sudo ./setup.sh
 
