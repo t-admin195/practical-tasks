@@ -10,7 +10,7 @@ nginx and docker practice with a static HTML page.
 
 ## files
 
-- `Dockerfile`–nginx image with static site
+- `dockerfile`–nginx image with static site
 - `index.html`–demo web page
 - `README.md` –project description
 

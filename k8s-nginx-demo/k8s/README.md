@@ -2,7 +2,7 @@
 
 a minimalistic project to deploy nginx in kubernetes using minikube.
 
-## Structure
+## structure
 
 ```bash
 k8s-nginx-demo
@@ -12,7 +12,7 @@ k8s-nginx-demo
         └── service.yml
 ```
 
-## Usage
+## usage
 
 start minikube:
 
