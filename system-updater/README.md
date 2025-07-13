@@ -1,13 +1,13 @@
 # system-updater
-a simple bash script to update arch, ubuntu, or debian systems and save logs with timestamps.the script also installs neofetch automatically if it's not inst>
-## usage
+A simple bash script to update arch, ubuntu, or debian systems and save logs with timestamps.the script also installs neofetch automatically if it's not inst>
+## Usage
 
-run with root:
+Run with root:
 
 ```bash
 sudo ./system-updater.sh
 ```
-## menu options
+## Menu options
 
 ![interface](https://github.com/yakshaver658/practical-tasks/blob/main/.github/images/image.png?raw=true)
 
@@ -15,7 +15,7 @@ sudo ./system-updater.sh
 1. update system and log output
 2. show latest log
 3. show log directory path
-4. exit
+4. delete all logs
+5. exit
 
-
-**important**: (logs are stored in /var/log/system-updater/)
+**Important**: (logs are stored in /var/log/system-updater/)
