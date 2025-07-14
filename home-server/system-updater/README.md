@@ -13,11 +13,11 @@ sudo ./system-updater.sh
 ![interface](https://github.com/yakshaver658/practical-tasks/blob/main/.github/images/image.png?raw=true) 
 
 
-1. update system and log output
-2. show latest log
-3. show log directory path
-4. delete all logs
-5. exit
+1. Update system and log output
+2. Show latest log
+3. Show log directory path
+4. Delete all logs
+5. Exit
 
 **Important**: (logs are stored in /var/log/system-updater/)
 

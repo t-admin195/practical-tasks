@@ -8,6 +8,7 @@ if [ "$UID" -ne 0 ]; then
   exit 1
 fi
 
+shopt -s nullglob
 
 # ===Variables=== 
 log_path=/var/log/system-updater/
@@ -26,7 +27,7 @@ exec > >(tee -a "$log_file") 2>&1
 # ===Simulate a simple loading animation by printin dots===
 repeat() {
   local dots=("." ".." "...")
-  for i in {1..3}; do
+  for i in {1..1}; do
     for d in "${dots[@]}"; do
       echo "$d"
       sleep 0.3
@@ -89,8 +90,9 @@ run_neofetch() {
   if [ -f /usr/bin/neofetch ]; then
     log_info "Neofetch already installed"
     neofetch
+    check_exit_status
   else
-    log_info "Install neofetch"
+    log_info "Install Neofetch"
       if grep -q "Arch" "$release_file"; then
         pacman -S neofetch --noconfirm
         check_exit_status   
@@ -98,6 +100,9 @@ run_neofetch() {
         apt-get update
         check_exit_status
         apt-get install -y neofetch
+        check_exit_status
+      elif grep -q "Fedora" "$release_file" || grep -q "Red Hat" "$release_file" || grep -q "CentOS" "$release_file"; then
+        dnf install neofetch
         check_exit_status
       else
         log_error "Unsupported OS for neofetch install"
@@ -154,7 +159,7 @@ while true; do
       please_wait
       run_neofetch
       
-# ==Ubuntu==
+# ==Ubuntu, Debian==
     elif grep -q "Ubuntu" "$release_file" || grep -q "Debian" "$release_file"; then
       please_wait
       log_info "Starting system update..."
@@ -166,12 +171,27 @@ while true; do
       please_wait
       run_neofetch 
       
-    else
-        log_error "ERROR! Unsupported os" 
-        echo "ERROR! Unsupported os"
-    fi
    
-  
+
+# ==Fedora, Red Hat and CentOS==
+    elif grep -q "Fedora" "$release_file" || grep -q "Red Hat" "$release_file" || grep -q "CentOS" "$release_file"; then      
+      please_wait
+      log_info "Starting system update"
+      dnf update -y
+      check_exit_status
+      log_info "Running an upgrade"
+      dnf upgrade -y --refresh
+      check_exit_status
+      please_wait
+      run_neofetch
+
+
+    else
+        log_error "ERROR! Unsupported os"
+        echo "ERROR! Unsupported os"
+    fi    
+ 
+
 # ===Displays the latest log file===
   elif [ "$userinput" = "2" ]; then
     shopt -s nullglob
@@ -179,7 +199,9 @@ while true; do
     if (( ${#logs[@]} == 0 )); then
       echo "There aren't any logs here. ¯\_(ツ)_/¯"
     else
-      cat "$(ls -t /var/log/system-updater/log_*.txt | head -n 1)"
+      latest_log=$(ls -t /var/log/system-updater/log_*.txt | head -n 1)
+      cat "$latest_log"
+
     fi
 
       
@@ -193,6 +215,7 @@ while true; do
     if [[ "$userinputlogs1" = Y ]] || [[ "$userinputlogs1" = y ]]; then
       repeat
       rm -rf "${log_path}"*
+      check_exit_status
     elif [[ "$userinputlogs1" = N ]] || [[ "$userinputlogs1" = n ]]; then
       echo "Abort"
     else
